@@ -1,8 +1,15 @@
 package fr.voleur.banque;
 
+import java.util.UUID;
+
 public class Account {
-    private int number;
+    private UUID number;
     private float balance;
+
+    public Account(){
+        this.number=UUID.randomUUID();
+        this.balance = 0;
+    }
 
     public void deposit(float amount){
         this.balance += amount;
